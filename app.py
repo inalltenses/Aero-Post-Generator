@@ -7,7 +7,7 @@ from transformers import BertTokenizerFast, BertForTokenClassification, pipeline
 import torch
 
 # ==========================================
-# 1. 설정 및 데이터 로드 (캐싱 적용)
+# 1. 페이지 설정 및 데이터 로드 (캐싱)
 # ==========================================
 st.set_page_config(page_title="Aero-Post Generator", page_icon="✈️", layout="wide")
 
@@ -19,7 +19,7 @@ def load_resources():
         model = BertForTokenClassification.from_pretrained(model_path)
         tokenizer = BertTokenizerFast.from_pretrained(model_path)
         
-        # 라벨 정보 수동 주입 (config.json에 저장 안 됐을 경우 대비)
+        # 라벨 정보 수동 주입
         id2label = {0: 'B-AIRCRAFT', 1: 'B-AIRLINE', 2: 'B-DATE', 3: 'I-ROUTE', 4: 'O'}
         label2id = {v: k for k, v in id2label.items()}
         model.config.id2label = id2label
@@ -28,14 +28,13 @@ def load_resources():
         nlp = pipeline("ner", model=model, tokenizer=tokenizer, aggregation_strategy="simple")
     except Exception as e:
         st.error(f"모델 로드 실패: {e}")
-        return None, {}, {}, {}, {}, {}, {}
+        return None, {}, {}, {}, {}, {}, {}, {}
 
     # 2. 데이터 로드
     try:
         df_airport = pd.read_csv('data/airports_list.csv', encoding='cp949').dropna(subset=['공항코드1(IATA)', '한글공항'])
         df_airline = pd.read_csv('data/airlines_list.csv', encoding='cp949').dropna(subset=['항공사코드_IATA', '한글항공사명'])
         
-        # 기종 데이터 로드 (인코딩 자동 감지 시도)
         try:
             df_aircraft = pd.read_csv('data/aircrafts_list.csv', encoding='utf-8')
         except:
@@ -49,7 +48,7 @@ def load_resources():
         name_to_kor_airport = dict(zip(df_airport['영문공항명'], df_airport['한글공항']))
         name_to_kor_airport.update(dict(zip(df_airport['영문도시명'], df_airport['한글공항'])))
         
-        # 기종 사전 (IATA -> FullName)
+        # 기종 사전
         aircraft_dict = {}
         for _, row in df_aircraft.iterrows():
             code = str(row['항공기코드_IATA']).strip()
@@ -78,15 +77,16 @@ def load_resources():
         
     except Exception as e:
         st.error(f"데이터 로드 실패: {e}")
-        return nlp, {}, {}, {}, {}, {}, {}
+        return nlp, {}, {}, {}, {}, {}, {}, {}
 
     return nlp, airport_dict, airline_dict, name_to_kor_airline, name_to_kor_airport, sorted_airline_names, sorted_airport_names, aircraft_dict
 
-# 리소스 로드
+# 리소스 로드 (전역 변수처럼 사용)
 nlp, airport_dict, airline_dict, name_to_kor_airline, name_to_kor_airport, sorted_airline_names, sorted_airport_names, aircraft_dict = load_resources()
 
+
 # ==========================================
-# 2. 헬퍼 함수들 (Logic)
+# 2. 헬퍼 함수들 (Inference와 동일하게 복붙!)
 # ==========================================
 def clean_garbage_words(text):
     if not text: return ""
@@ -102,10 +102,7 @@ def clean_location_name(name):
 
 def normalize_aircraft_name(name):
     if not name: return ""
-    name = name.upper().replace("BOEING", "B").replace("AIRBUS", "A").strip()
-    if re.match(r'^7\d{2}', name): name = "B" + name
-    name = name.replace("B B", "B").replace("A A", "A")
-    return name
+    return name.upper().strip()
 
 def get_aircraft_fullname(code):
     if not code: return ""
@@ -217,7 +214,7 @@ def extract_network_routes(text):
 
 def classify_action_from_title(title, text, is_codeshare, aircraft_str):
     t = (title + " " + text[:200]).lower()
-    if is_codeshare or "codeshare" in t: return "코드쉐어", "노선의 공동운항 협약을 맺었습니다."
+    if is_codeshare or "codeshare" in t: return "코드쉐어(공동운항) 협약", "노선의 공동운항 협약을 맺었습니다."
     if any(k in t for k in ["launches", "launch", "inaugural", "new route", "plans", "opens new"]): return "신규 취항", "해당 노선을 신규 취항합니다."
     if any(k in t for k in ["resumes", "resume", "restores", "reinstates", "relaunches"]): return "운항 재개", "중단되었던 노선 운항을 재개합니다."
     if any(k in t for k in ["extra", "increase", "increases", "boosts"]): return "증편", "노선 운항을 증편합니다."
@@ -301,11 +298,11 @@ def generate_caption(title, text, link):
         freq_line = f"해당 운항편은 주 {frequency}회 편성되며 ({', '.join(days_list)})" if frequency and days_list and int(frequency) == len(days_list) else f"해당 운항편은 주 {frequency}회 편성되며" if frequency else "상세 스케줄은 다음과 같습니다"
         caption.append(f"\n🗓️ {freq_line}, 상세 스케줄은 다음과 같습니다:\n")
         for s in schedules:
-            flt, dep_code, dep_tm, arr_tm, arr_code = s 
+            flt, dep_code, dep_tm, arr_code, arr_tm = s 
             if len(flt) >= 5 and flt[0].isdigit(): flt = flt[1:]
             dep_nm = airport_dict.get(dep_code, dep_code)
             arr_nm = airport_dict.get(arr_code, arr_code)
-            caption.append(f"  * {flt}: {dep_nm}({dep_code}) {format_time_pretty(dep_tm)} 출발 ➔ {arr_nm}({arr_code}) {format_time_pretty(arr_tm)} 도착")
+            caption.append(f"  ✈ {flt}: {dep_nm}({dep_code}) {format_time_pretty(dep_tm)} 출발 ➔ {arr_nm}({arr_code}) {format_time_pretty(arr_tm)} 도착")
     elif network_routes:
         caption.append("\n🗓️ 신규 노선 상세:\n")
         for r in network_routes:
@@ -313,60 +310,56 @@ def generate_caption(title, text, link):
             s_net = get_korean_smart(r['start_en'], raw_text, 'airport')
             e_net = get_korean_smart(r['end_en'], raw_text, 'airport')
             freq_str = f"주 {r['count']}회" if r["unit"]=="weekly" else f"하루 {r['count']}회"
-            line = f"  * {s_net} – {e_net}: {eff_kr}부터 {freq_str} 운항"
+            line = f"  ✈ {s_net} - {e_net}: {eff_kr}부터 {freq_str} 운항"
             if r['aircraft']: line += f" ({r['aircraft']})"
             caption.append(line)
     else:
         caption.append("\n🗓️ 상세 운항 스케줄은 항공사 홈페이지를 참고해주세요.")
         
-    caption.append(f"\n🔗 출처: [AeroRoutes] {link}")
-    caption.append("📸")
+    caption.append(f"\n지세한 정보는 항공사 홈페이지를 참고해주세요.\n\n🔗 AeroRoutes {link} \n 📸 {airline_text}")
     return "\n".join(caption)
 
 # ==========================================
-# 3. UI 구성
+# 4. Streamlit UI 구성
 # ==========================================
 st.title("✈️ Aero-Post Generator")
-st.markdown("항공 뉴스 캡션 자동 생성기 (Instagram Format)")
+st.markdown("AeroRoutes 링크를 넣으면 **인스타그램용 캡션**을 자동으로 만들어줍니다.")
 
-if not nlp:
-    st.error("모델을 불러오지 못했습니다. data 폴더와 model 폴더를 확인해주세요.")
-else:
-    tab1, tab2 = st.tabs(["🔗 링크로 생성", "📝 텍스트로 생성"])
+tab1, tab2 = st.tabs(["🔗 링크로 생성", "📝 텍스트로 생성"])
 
-    with tab1:
-        url_input = st.text_input("AeroRoutes 기사 URL")
-        if st.button("캡션 생성 (Link)"):
-            if url_input:
-                with st.spinner('크롤링 중...'):
-                    try:
-                        headers = {'User-Agent': 'Mozilla/5.0'}
-                        res = requests.get(url_input, headers=headers)
-                        soup = BeautifulSoup(res.text, 'html.parser')
-                        title_tag = soup.find('h1', class_='blog-title')
-                        if not title_tag: title_tag = soup.find('h1', class_='entry-title')
-                        title = title_tag.get_text(strip=True) if title_tag else "제목 없음"
-                        
-                        content = ""
-                        for cls in ['entry-content', 'sqs-block-content', 'BlogList-item-excerpt']:
-                            div = soup.find('div', class_=cls)
-                            if div: content = div.get_text("\n", strip=True); break
-                        
-                        if content:
-                            result = generate_caption(title, content, url_input)
-                            st.success("생성 완료!")
-                            st.text_area("결과 (복사해서 사용하세요)", value=result, height=400)
-                        else:
-                            st.error("본문을 찾을 수 없습니다.")
-                    except Exception as e:
-                        st.error(f"에러 발생: {e}")
-    
-    with tab2:
-        title_in = st.text_input("제목 (선택사항)", value="항공 뉴스")
-        text_in = st.text_area("기사 본문", height=200)
-        if st.button("캡션 생성 (Text)"):
-            if text_in:
-                with st.spinner('분석 중...'):
-                    result = generate_caption(title_in, text_in, "https://www.aeroroutes.com")
-                    st.success("생성 완료!")
-                    st.text_area("결과", value=result, height=400)
+with tab1:
+    url_input = st.text_input("AeroRoutes 기사 URL")
+    if st.button("캡션 생성 (Link)"):
+        if url_input:
+            with st.spinner('크롤링 중...'):
+                try:
+                    headers = {'User-Agent': 'Mozilla/5.0'}
+                    res = requests.get(url_input, headers=headers)
+                    soup = BeautifulSoup(res.text, 'html.parser')
+                    title_tag = soup.find('h1', class_='blog-title')
+                    if not title_tag: title_tag = soup.find('h1', class_='entry-title')
+                    title = title_tag.get_text(strip=True) if title_tag else "제목 없음"
+                    
+                    content = ""
+                    for cls in ['entry-content', 'sqs-block-content', 'BlogList-item-excerpt']:
+                        div = soup.find('div', class_=cls)
+                        if div: content = div.get_text("\n", strip=True); break
+                    
+                    if content:
+                        result = generate_caption(title, content, url_input)
+                        st.success("생성 완료!")
+                        st.text_area("결과 (복사해서 사용하세요)", value=result, height=500)
+                    else:
+                        st.error("본문을 찾을 수 없습니다.")
+                except Exception as e:
+                    st.error(f"에러 발생: {e}")
+
+with tab2:
+    title_in = st.text_input("제목 (선택사항)", value="항공 뉴스")
+    text_in = st.text_area("기사 본문", height=200)
+    if st.button("캡션 생성 (Text)"):
+        if text_in:
+            with st.spinner('분석 중...'):
+                result = generate_caption(title_in, text_in, "https://www.aeroroutes.com")
+                st.success("생성 완료!")
+                st.text_area("결과", value=result, height=500)
