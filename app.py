@@ -28,7 +28,10 @@ def load_resources():
         nlp = pipeline("ner", model=model, tokenizer=tokenizer, aggregation_strategy="simple")
     except Exception as e:
         st.error(f"모델 로드 실패: {e}")
-        return None, {}, {}, {}, {}, {}, {}
+        # nlp, airport_dict, airline_dict, name_to_kor_airline, name_to_kor_airport,
+        # sorted_airline_names, sorted_airport_names, aircraft_dict
+        return None, {}, {}, {}, {}, [], [], {}
+
 
     # 2. 데이터 로드
     try:
@@ -78,7 +81,8 @@ def load_resources():
         
     except Exception as e:
         st.error(f"데이터 로드 실패: {e}")
-        return nlp, {}, {}, {}, {}, {}, {}
+        return nlp, {}, {}, {}, {}, [], [], {}
+
 
     return nlp, airport_dict, airline_dict, name_to_kor_airline, name_to_kor_airport, sorted_airline_names, sorted_airport_names, aircraft_dict
 
