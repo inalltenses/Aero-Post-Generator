@@ -4,3 +4,5 @@ transformers
 torch
 requests
 beautifulsoup4
+bs4
+gdown
