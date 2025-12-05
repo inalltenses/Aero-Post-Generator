@@ -1,0 +1,143 @@
+제조사,비행기모델,항공기코드_IATA,항공기코드_ICAO,비행기구분,비행기크기,비행기등급,엔진,엔진수,최초운항일,상태,조종석수,승객수,길이,높이,운송범위
+AIRBUS,Airbus 350-900,A359,359,LandPlane,HIGH,Wide-body jet airliner,Jet,2,2013-06-14,생산중,2,440,66.8,17,15372
+AIRBUS,Airbus A220-100,BCS1,221,LandPlane,MEDIUM,Narrow-body jet airliner,Jet,2,2013-09-16,생산중,2,135,35,11.5,6390
+AIRBUS,Airbus A220-300,BCS3,223,LandPlane,MEDIUM,Narrow-body jet airliner,Jet,2,2013-09-16,생산중,2,160,38.71,11.5,6700
+AIRBUS,Airbus A300 B4-600,A306,AB6,LandPlane,HIGH,Wide-body jet airliner,Jet,2,1972-10-28,단종,2,360,54.1,16.6,7500
+AIRBUS,Airbus A300-B2,A30B,AB4,LandPlane,HIGH,Wide-body jet airliner,Jet,2,1974-04-15,단종,3,360,53.6,16.5,5375
+AIRBUS,Airbus A310,A310,312,LandPlane,MEDIUM,Wide-body jet airliner,Jet,2,1982-04-03,단종,2,279,46.6,15.8,6500
+AIRBUS,Airbus A318,A318,318,LandPlane,MEDIUM,Narrow-body jet airliner,Jet,2,2002-01-15,생산중,2,100,31.4,12.5,5740
+AIRBUS,Airbus A319,A319,319,LandPlane,MEDIUM,Narrow-body jet airliner,Jet,2,1995-08-25,생산중,2,142,33.8,11.7,6940
+AIRBUS,Airbus A319 Neo,A19N,31N,LandPlane,MEDIUM,Narrow-body twin-engine jet airliner,Jet,2,2014-12-25,생산중,2,180,33.8,11.7,6950
+AIRBUS,Airbus A320,A320,320,LandPlane,MEDIUM,Single-aisle jet airliner,Jet,2,1987-02-22,생산중,2,179,37.5,11.7,6100
+AIRBUS,Airbus A320 Neo,A20N,32N,LandPlane,MEDIUM,Narrow-body twin-engine jet airliner,Jet,2,2014-12-25,생산중,2,164,37.5,11.7,6500
+AIRBUS,Airbus A321,A321,321,LandPlane,MEDIUM,Single-aisle jet airliner,Jet,2,1988-11-24,생산중,2,212,44.5,11.8,5900
+AIRBUS,Airbus A321 Neo,A21N,32Q,LandPlane,MEDIUM,Narrow-body twin-engine jet airliner,Jet,2,2014-12-25,생산중,2,188,44.5,11.7,7400
+AIRBUS,Airbus A321XLR,A21X,32X,LandPlane,MEDIUM,Narrow-body twin-engine jet airliner,Jet,2,2024-06-15,생산중,2,244,45,11.8,8700
+AIRBUS,Airbus A330-200,A332,332,LandPlane,HIGH,Wide-body jet airliner,Jet,2,1992-11-02,생산중,2,380,58.3,16.8,13450
+AIRBUS,Airbus A330-300,A333,333,LandPlane,HIGH,Wide-body jet airliner,Jet,2,1992-11-02,생산중,2,412,63.6,16.7,11750
+AIRBUS,Airbus A330-800,A338,338,LandPlane,HIGH,Wide-body jet airliner,Jet,2,2017-10-19,생산중,2,260,58.8,17.3,15094
+AIRBUS,Airbus A330-900,A339,339,LandPlane,HIGH,Wide-body jet airliner,Jet,2,2017-10-19,생산중,2,300,63.6,16.7,13334
+AIRBUS,Airbus A340-200,A342,342,LandPlane,HIGH,Wide-body jet airliner,Jet,4,1991-10-25,생산중,2,360,59.4,16.7,12400
+AIRBUS,Airbus A340-300,A343,343,LandPlane,HIGH,Wide-body jet airliner,Jet,4,1991-10-25,생산중,2,335,63.6,16.7,13500
+AIRBUS,Airbus A340-500,A345,345,LandPlane,HIGH,Wide-body jet airliner,Jet,4,1991-10-25,생산중,2,490,67.8,17.9,16670
+AIRBUS,Airbus A340-600,A346,346,LandPlane,HIGH,Wide-body jet airliner,Jet,4,1991-10-25,생산중,2,550,75.3,17.9,14450
+AIRBUS,Airbus A350-1000 XWB,A35K,351,LandPlane,HIGH,Wide-body jet airliner,Jet,2,2013-06-14,생산중,2,366,66.9,16.9,16100
+AIRBUS,Airbus A350F,A35F,35F,LandPlane,HIGH,Wide-body freighter,Jet,2,2025-01-15,생산중,2,0,70,17,4700
+AIRBUS,Airbus A380-800,A388,388,LandPlane,HIGH,Wide-body jet airliner,Jet,4,2005-04-27,단종,2,555,72.7,24.1,14800
+ANTONOV,An-140,A140,A40,LandPlane,MEDIUM,Turboprop regional airliner,Turboprop,2,1997-12-17,생산중,2,52,22.6,8.2,3700
+ANTONOV,An-148,A148,A81,LandPlane,MEDIUM,Regional jet airliner,Jet,2,2004-12-17,생산중,2,85,29.1,8.2,4400
+ANTONOV,An-158,A158,A58,LandPlane,MEDIUM,Regional jet airliner,Jet,2,2010-04-28,생산중,2,99,30.8,8.2,2500
+ANTONOV,An-24,AN24,AN4,LandPlane,MEDIUM,Transport Turboprop airliner,Turboprop,2,1959-10-29,단종,3,50,23.5,8.3,2400
+ANTONOV,An-26,AN26,A26,LandPlane,MEDIUM,Transport Turboprop airliner,Turboprop,2,1969-05-21,단종,5,50,23.8,8.6,2500
+ANTONOV,An-28,AN28,A28,LandPlane,LOW,Transport Turboprop airliner,Turboprop,2,1969-09-01,단종,2,17,13.1,4.9,1365
+ANTONOV,An-30,AN30,A30,LandPlane,MEDIUM,Transport Turboprop airliner,Turboprop,2,1967-08-21,단종,2,5,24.26,8.32,2630
+ANTONOV,An-32,AN32,A32,LandPlane,MEDIUM,Military transport aircraft,Turboprop,2,1976-07-09,단종,4,50,23.8,8.5,2500
+ANTONOV,Antonov AN-12,AN12,ANF,LandPlane,MEDIUM,Civil and military transport aircraft,Turboprop,4,1957-12-16,단종,5,90,33.1,10.5,5700
+ANTONOV,Antonov AN-124 Ruslan,A124,A4F,LandPlane,HIGH,Heavy transport aircraft,Jet,4,1982-12-24,단종,6,88,69.1,21.1,14000
+ANTONOV,Antonov AN-74-100/200,AN72,AN7,LandPlane,MEDIUM,Transport jet airliner,Jet,2,1977-08-31,생산중,5,52,28.07,8.65,4325
+ATR,ATR 42-300/320,AT43,AT4,LandPlane,MEDIUM,Turboprop regional airliner,Turboprop,2,1984-08-16,생산중,2,48,22.67,7.59,850
+ATR,ATR 42-500,AT45,AT5,LandPlane,MEDIUM,Turboprop regional airliner,Turboprop,2,1995-10-31,생산중,2,50,22.67,7.59,1326
+ATR,ATR 42-600,AT46,ATR,LandPlane,MEDIUM,Turboprop regional airliner,Turboprop,2,2007-10-31,생산중,2,50,22.67,7.59,1345
+ATR,ATR 72-211/212,AT73,ATR,LandPlane,MEDIUM,Regional Turboprop airliner,Turboprop,2,1988-10-27,생산중,2,74,27.17,7.65,1528
+ATR,ATR 72-600/212A,AT76,ATR,LandPlane,MEDIUM,Regional Turboprop airliner,Turboprop,2,2009-07-24,생산중,2,74,27.17,7.65,1528
+ATR,ATR-72-201/202,AT72,AT7,LandPlane,MEDIUM,Regional Turboprop airliner,Turboprop,2,1988-10-27,생산중,2,74,27.17,7.65,1528
+ATR,ATR-72-500,AT75,ATR,LandPlane,MEDIUM,Regional Turboprop airliner,Turboprop,2,1988-10-27,생산중,2,74,27.17,7.65,1528
+BAC,BAC 111 One-Eleven,BA11,B11,LandPlane,MEDIUM,Narrow-body jet airliner,Jet,2,1963-08-20,단종,2,119,32.61,7.47,1250
+BAC,BAe 146-100,B461,141,LandPlane,MEDIUM,Narrow-body jet airliner,Jet,4,1981-09-03,단종,2,82,26.19,8.61,3870
+BAC,BAe 146-200,B462,142,LandPlane,MEDIUM,Narrow-body jet airliner,Jet,4,1981-09-03,단종,2,100,28.55,8.61,3650
+BAC,BAe 146-300,B463,143,LandPlane,MEDIUM,Narrow-body jet airliner,Jet,4,1981-09-03,단종,2,112,31,8.61,3340
+BOEING,Boeing (Douglas) DC 10-10/30/40,DC10,D11,LandPlane,HIGH,Wide-body jet airliner,Jet,3,1970-08-29,단종,3,399,55.55,17.55,9600
+BOEING,Boeing (Douglas) MD 11,MD11,M11,LandPlane,HIGH,Wide-body jet airliner,Jet,3,1990-01-10,단종,2,410,61.6,17.65,12455
+BOEING,Boeing (Douglas) MD 81,MD81,M81,LandPlane,MEDIUM,Narrow-body jet airliner,Jet,2,1979-10-18,단종,2,155,45.06,9.02,3300
+BOEING,Boeing (Douglas) MD 82,MD82,M82,LandPlane,MEDIUM,Narrow-body jet airliner,Jet,2,1981-01-08,단종,2,155,45.06,9.02,3800
+BOEING,Boeing (Douglas) MD 83,MD83,M83,LandPlane,MEDIUM,Narrow-body jet airliner,Jet,2,1984-12-17,단종,2,155,45.06,9.02,4720
+BOEING,Boeing (Douglas) MD 87,MD87,M87,LandPlane,MEDIUM,Narrow-body jet airliner,Jet,2,1986-12-04,단종,2,130,39.75,9.25,5400
+BOEING,Boeing (Douglas) MD 88,MD88,M88,LandPlane,MEDIUM,Narrow-body jet airliner,Jet,2,1987-08-15,단종,2,155,45.06,9.02,4720
+BOEING,Boeing (Douglas) MD 90,MD90,M90,LandPlane,MEDIUM,Narrow-body jet airliner,Jet,2,1983-02-22,단종,2,172,46.51,9.33,3787
+BOEING,Boeing 707,B701,701,LandPlane,MEDIUM,Narrow-body jet airliner,Jet,4,1957-12-20,단종,3,174,44.22,12.7,5600
+BOEING,Boeing 717,B712,712,LandPlane,MEDIUM,Narrow-body jet airliner,Jet,4,1988-09-02,단종,2,134,37.8,9.04,2648
+BOEING,Boeing 720,B720,720,LandPlane,MEDIUM,Narrow-body jet airliner,Jet,4,1959-11-23,단종,3,156,41.5,12.62,5200
+BOEING,Boeing 727-100,B721,721,LandPlane,MEDIUM,Narrow-body jet airliner,Jet,3,1963-02-09,단종,3,131,40.59,10.44,4170
+BOEING,Boeing 727-200,B722,722,LandPlane,MEDIUM,Narrow-body jet airliner,Jet,3,1967-07-27,단종,3,189,46.68,10.65,3500
+BOEING,Boeing 737 MAX 7,B37M,7M7,LandPlane,MEDIUM,Narrow-bodytwin-engine jet airliner,Jet,2,2016-01-29,생산중,2,172,35.56,12.29,7000
+BOEING,Boeing 737 MAX 8,B38M,7M8,LandPlane,MEDIUM,Narrow-bodytwin-engine jet airliner,Jet,2,2017-05-22,생산중,2,210,39.47,12.29,6500
+BOEING,Boeing 737 MAX 9,B39M,7M9,LandPlane,MEDIUM,Narrow-bodytwin-engine jet airliner,Jet,2,2017-04-13,생산중,2,220,42.16,12.29,6100
+BOEING,Boeing 737 MAX10,B3XM,7MJ,LandPlane,MEDIUM,Narrow-bodytwin-engine jet airliner,Jet,2,2021-06-30,생산중,2,230,43.79,12.29,5700
+BOEING,Boeing 737-200,B732,732,LandPlane,MEDIUM,Narrow-body jet airliner,Jet,2,1967-08-08,단종,2,136,30.53,11,4800
+BOEING,Boeing 737-300,B733,733,LandPlane,MEDIUM,Narrow-body jet airliner,Jet,2,1984-02-24,단종,2,149,33.4,11.3,4398
+BOEING,Boeing 737-400,B734,734,LandPlane,MEDIUM,Narrow-body jet airliner,Jet,2,1988-02-19,단종,2,188,36.5,11.1,4398
+BOEING,Boeing 737-500,B735,735,LandPlane,MEDIUM,Narrow-body jet airliner,Jet,2,1989-06-30,단종,2,145,31,11.1,4398
+BOEING,Boeing 737-600,B736,736,LandPlane,MEDIUM,Narrow-body jet airliner,Jet,2,1988-01-22,단종,2,149,31.2,12.6,5575
+BOEING,Boeing 737-700,B737,73G,LandPlane,MEDIUM,Narrow-body jet airliner,Jet,2,1997-02-09,생산중,2,149,33.6,12.6,5575
+BOEING,Boeing 737-800,B738,738,LandPlane,MEDIUM,Narrow-body jet airliner,Jet,2,1997-07-31,생산중,2,189,39.5,12.6,5575
+BOEING,Boeing 737-900,B739,739,LandPlane,MEDIUM,Narrow-body jet airliner,Jet,2,2000-08-03,생산중,2,220,42.1,12.6,5575
+BOEING,Boeing 747-100,B741,741,LandPlane,HIGH,Wide-body jet airliner,Jet,4,1969-02-09,단종,3,440,70.7,19.3,8560
+BOEING,Boeing 747-200,B742,742,LandPlane,HIGH,Wide-body jet airliner,Jet,4,1970-10-11,단종,3,550,70.7,19.3,12150
+BOEING,Boeing 747-300,B743,743,LandPlane,HIGH,Wide-body jet airliner,Jet,4,1982-10-05,단종,3,550,70.6,19.4,11720
+BOEING,Boeing 747-400,B744,744,LandPlane,HIGH,Wide-body jet airliner,Jet,4,1989-02-01,단종,2,660,70.7,19.4,14200
+BOEING,Boeing 747-8,B748,74H,LandPlane,HIGH,Wide-body jet airliner,Jet,4,2010-02-08,단종,2,495,76.25,19.5,14320
+BOEING,Boeing 757-200,B752,752,LandPlane,MEDIUM,Narrow-body jet airliner,Jet,2,1982-02-19,단종,2,239,47.3,13.6,7250
+BOEING,Boeing 757-300,B753,753,LandPlane,HIGH,Narrow-body jet airliner,Jet,2,1998-08-02,단종,2,295,54.4,13.6,6295
+BOEING,Boeing 767-200,B762,762,LandPlane,HIGH,Wide-body jet airliner,Jet,2,1981-09-26,단종,2,290,48.51,15.9,7200
+BOEING,Boeing 767-300,B763,763,LandPlane,HIGH,Wide-body jet airliner,Jet,2,1981-09-26,단종,2,351,54.94,15.9,7200
+BOEING,Boeing 767-400,B764,764,LandPlane,HIGH,Wide-body jet airliner,Jet,2,1981-09-26,단종,2,375,61.37,16.8,10415
+BOEING,Boeing 777-200,B772,772,LandPlane,HIGH,Wide-body jet airliner,Jet,2,1994-06-12,단종,2,440,63.73,18.5,9700
+BOEING,Boeing 777-200LR,B77L,77L,LandPlane,HIGH,Wide-body jet airliner,Jet,2,1994-06-12,생산중,2,440,63.73,18.6,9200
+BOEING,Boeing 777-200LRF,B77L,77X,LandPlane,HIGH,Wide-body jet airliner,Jet,2,1994-06-12,생산중,2,440,63.73,18.6,9200
+BOEING,Boeing 777-300,B773,773,LandPlane,HIGH,Wide-body jet airliner,Jet,2,1997-10-16,단종,2,550,73.86,18.5,11165
+BOEING,Boeing 777-300ER,B77W,77W,LandPlane,HIGH,Wide-body jet airliner,Jet,2,1994-06-12,생산중,2,550,73.86,18.5,13649
+BOEING,Boeing 777-8 ,B778,778,LandPlane,HIGH,Wide-body jet airliner,Jet,2,2020-01-25,생산중,2,395,70.87,19.48,16190
+BOEING,Boeing 777-8F,B77F,778F,LandPlane,HIGH,Wide-body freighter,Jet,2,2024-12-01,생산중,2,0,70.6,19.5,9200
+BOEING,Boeing 777-9,B779,779,LandPlane,HIGH,Wide-body jet airliner,Jet,2,2020-01-25,생산중,2,357,76.73,19.68,13500
+BOEING,Boeing 787-10 Dreamliner,B78X,781,LandPlane,HIGH,Wide-body jet airliner,Jet,2,2017-06-08,생산중,2,440,68.28,17.02,11910
+BOEING,Boeing 787-8 BBJ/Dreamliner,B788,788,LandPlane,HIGH,Wide-body jet airliner,Jet,2,2009-12-15,생산중,2,381,56.72,16.92,13620
+BOEING,Boeing 787-9 Dreamliner,B789,789,LandPlane,HIGH,Wide-body jet airliner,Jet,2,2013-09-17,생산중,2,420,62.81,17.02,14140
+BOEING-MCDONNELL DOUGLAS,DC-3,DC3,D3F,LandPlane,MEDIUM,Narrow-body Turboprop airliner,Turboprop,2,1935-12-17,단종,2,32,19.7,5.16,2540
+BOEING-MCDONNELL DOUGLAS,DC-6,DC6,D6F,LandPlane,MEDIUM,Transport Turboprop airliner,Turboprop,2,1946-02-15,단종,3,68,30.66,8.66,7377
+BOEING-MCDONNELL DOUGLAS,DC-8,DC8,D8,LandPlane,MEDIUM,Narrow-body jet airliner,Jet,4,1958-05-30,단종,3,177,45.9,13.1,6960
+BOEING-MCDONNELL DOUGLAS,DC-9,DC9,D9,LandPlane,MEDIUM,Narrow-body jet airliner,Jet,2,1965-02-05,단종,2,139,40.72,8.8,2400
+BOEING-MCDONNELL DOUGLAS,DeHavilland Canada 8/DHC8-400,DH8D,DH4,LandPlane,MEDIUM,Turboprop regional airliner,Turboprop,2,1983-06-20,생산중,2,90,32.8,8.4,2040
+BOMBARDIER,Bombardier BD-700 Global 5000,GL5T,CCX,LandPlane,MEDIUM,Business jet,Jet,2,1996-10-13,생산중,2,16,29.5,7.8,9630
+BOMBARDIER,Bombardier BD-700 Global 7500,GL7T,CCX,LandPlane,MEDIUM,Business jet,Jet,2,2016-11-04,생산중,2,19,33.88,8.2,14300
+BOMBARDIER,canadair CRJ-100,CRJ1,CR1,LandPlane,MEDIUM,Regional jet airliner,Jet,2,1991-05-10,단종,2,50,26.77,6.3,3056
+BOMBARDIER,canadair CRJ-200,CRJ2,CR2,LandPlane,MEDIUM,Regional jet airliner,Jet,2,1991-05-10,단종,2,50,26.77,6.3,3148
+BOMBARDIER,canadair CRJ-700,CRJ7,CR7,LandPlane,MEDIUM,Regional jet airliner,Jet,2,1999-05-27,단종,2,78,32.3,7.6,2593
+BOMBARDIER,canadair CRJ-900,CRJ9,CR9,LandPlane,MEDIUM,Regional jet airliner,Jet,2,1999-05-27,단종,2,90,36.2,7.5,2871
+BOMBARDIER,Canadair Regional Jet 1000,CRJX,CRK,LandPlane,MEDIUM,Regional jet airliner,Jet,2,1999-05-27,단종,2,104,39.1,7.5,3056
+BRITISH AEROSPACE,Avro RJ-100 Avroliner,RJ1H,AR1,LandPlane,MEDIUM,Regional jet airliner,Jet,4,1981-09-03,단종,2,82,26.19,8.61,3870
+BRITISH AEROSPACE,Avro RJ-85 Avroliner,RJ85,AR8,LandPlane,MEDIUM,Regional jet airliner,Jet,4,1981-09-03,단종,2,100,28.55,8.61,3650
+COMAC,ARJ21,AJ27,C27,LandPlane,MEDIUM,Regional jet airliner,Jet,2,2008-11-28,생산중,2,85,32.7,8.5,2200
+COMAC,C-919,C919,919,LandPlane,MEDIUM,Narrow-bodytwin-engine jet airliner,Jet,2,2017-05-05,생산중,2,192,38.9,11.95,4139
+COMAC,COMAC C929,C929,929,LandPlane,HIGH,Wide-body jet airliner,Jet,2,2027-01-01,개발중,2,300,63,17.5,12000
+DASSAULT,Dassault Falcon 7X,FA7X,DF7,LandPlane,MEDIUM,Business jet,Jet,3,2005-05-05,생산중,2,16,23.38,7.83,11019
+DASSAULT,Dassault Falcon 900,F900,DF9,LandPlane,MEDIUM,Business jet,Jet,3,1984-09-21,생산중,2,19,20.21,7.5,7400
+DEHAVILLAND CANADA,DeHavilland Canada Dash 8/DHC8-300,DH8C,DH3,LandPlane,MEDIUM,Turboprop regional airliner,Turboprop,2,1983-06-20,단종,2,56,25.7,7.49,1711
+DEHAVILLAND CANADA,DeHavilland Canada DHC-7,DHC7,DH7,LandPlane,MEDIUM,Turboprop regional airliner,Turboprop,4,1975-03-27,단종,2,54,24.58,7.98,1280
+DEHAVILLAND CANADA,DeHavilland Canada DHC8-100,DH8A,DH1,LandPlane,MEDIUM,Turboprop regional airliner,Turboprop,2,1983-06-20,단종,2,40,22.25,7.49,2084
+DEHAVILLAND CANADA,DeHavilland Canada DHC8-200,DH8B,DH2,LandPlane,MEDIUM,Turboprop regional airliner,Turboprop,2,1983-06-20,단종,2,40,22.25,7.49,2084
+EMBRAER,Embraer 135BJ Legacy 600,E35L,ER3,LandPlane,MEDIUM,Business jet,Jet,2,2001-03-31,생산중,2,14,26.33,6.64,6300
+EMBRAER,Embraer 170,E170,E70,LandPlane,MEDIUM,Narrow-body jet airliner,Jet,2,2002-02-19,단종,2,78,29.9,9.83,3982
+EMBRAER,Embraer 175 long wing,E75L,E7W,LandPlane,MEDIUM,Narrow-body jet airliner,Jet,2,2002-02-19,생산중,2,88,31.67,9.86,4074
+EMBRAER,Embraer 190,E190,E90,LandPlane,MEDIUM,Narrow-body jet airliner,Jet,2,2004-03-12,단종,2,114,36.25,10.57,4537
+EMBRAER,Embraer 190-E2,E290,290,LandPlane,MEDIUM,Narrow-body jet airliner,Jet,2,2016-05-23,생산중,2,114,36.25,10.96,5280
+EMBRAER,Embraer 195,E195,E95,LandPlane,MEDIUM,Narrow-body jet airliner,Jet,2,2004-12-07,단종,2,124,38.66,10.54,4260
+EMBRAER,Embraer 195-E2,E295,295,LandPlane,MEDIUM,Narrow-body jet airliner,Jet,2,2017-03-29,생산중,2,146,41.51,10.91,4800
+EMBRAER,Embraer ERJ 135/140/Legacy,E135,ER3,LandPlane,MEDIUM,Regional jet airliner,Jet,2,1995-08-11,단종,2,37,26.34,6.76,3240
+EMBRAER,Embraer ERJ-145,E145,ER4,LandPlane,MEDIUM,Regional jet airliner,Jet,2,1995-08-11,단종,2,50,29.87,6.76,3700
+EMBRAER,Embraer Legacy 450/praetor 500,E545,L2J,LandPlane,MEDIUM,Business jet,Jet,2,2013-12-28,생산중,2,9,19.69,6.43,6190
+EMBRAER,Embraer Legacy 500/Praetor 600,E550,L2J,LandPlane,MEDIUM,Business jet,Jet,2,2014-10-11,생산중,2,12,20.74,6.44,7441
+GULFSTREAM AEROSPACE,Gulfstream Aerospace Gulfstream G7-G500,GA5C,L2J,LandPlane,MEDIUM,Business jet,Jet,2,2015-05-18,생산중,2,19,27.79,7.77,9816
+GULFSTREAM AEROSPACE,Gulfstream Aerospace Gulfstream G7-G600,GA6C,L2J,LandPlane,MEDIUM,Business jet,Jet,2,2016-12-17,생산중,2,19,29.29,7.7,12223
+GULFSTREAM AEROSPACE,Gulfstream G650,GLF6,GJ6,LandPlane,MEDIUM,Business jet,Jet,2,2009-11-25,생산중,2,19,30.4,7.82,13000
+GULFSTREAM AEROSPACE,Gulfstream II,GLF2,GJ2,LandPlane,MEDIUM,Business jet,Jet,2,1966-10-02,단종,2,19,24.36,7.47,6570
+GULFSTREAM AEROSPACE,Gulfstream III,GLF3,GJ3,LandPlane,MEDIUM,Business jet,Jet,2,1979-12-02,단종,2,19,25.32,7.43,4100
+GULFSTREAM AEROSPACE,Gulfstream IV/G400,GLF4,GJ4,LandPlane,MEDIUM,Business jet,Jet,2,1985-09-19,단종,2,19,26.92,7.45,7815
+GULFSTREAM AEROSPACE,Gulfstream V/G500,GLF5,GJ50,LandPlane,MEDIUM,Business jet,Jet,2,2015-05-18,생산중,2,19,27.79,7.77,9816
+ILYUSHIN,Ilyushin IL62,IL62,IL6,LandPlane,HIGH,Narrow-body jet airliner,Jet,4,1963-01-03,단종,5,186,53.12,12.35,10000
+ILYUSHIN,Ilyushin IL86,IL86,ILW,LandPlane,HIGH,Wide-body jet airliner,Jet,4,1976-12-22,단종,4,350,60.22,15.67,5000
+ILYUSHIN,Ilyushin IL96,IL96,I93,LandPlane,HIGH,Wide-body jet airliner,Jet,4,1988-09-28,생산중,3,436,63.93,17.55,10000
+SAAB,Saab SF 340,SF34,SF3,LandPlane,MEDIUM,Regional Turboprop airliner,Turboprop,2,1983-01-25,단종,2,34,19.73,6.97,1350
+SUKHOI,SUKHOI Superjet 100-95,SU95,SU9,LandPlane,MEDIUM,Regional jet airliner,Jet,2,2008-05-19,생산중,2,108,29.94,10.28,4578
+TUPOLEV,Tupolev Tu-134,T134,TU3,LandPlane,MEDIUM,Narrow-body jet airliner,Jet,2,1963-07-29,단종,5,84,37.1,9.02,3000
+TUPOLEV,Tupolev Tu-154,T154,TU5,LandPlane,MEDIUM,Narrow-body jet airliner,Jet,3,1968-10-04,단종,5,180,48,11.4,3900
+TUPOLEV,Tupolev Tu-204,T204,T20,LandPlane,MEDIUM,Narrow-body jet airliner,Jet,2,1989-01-02,생산중,3,210,46.14,13.9,4300
